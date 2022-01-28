@@ -1,19 +1,23 @@
 {
-  "name": "xord-app",
+  "name": "anime-solana",
   "version": "0.1.0",
   "private": true,
   "cracoConfig": "craco.config.js",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@ethersproject/providers": "^5.5.1",
+    "@metaplex/js": "^4.12.0",
+    "@project-serum/anchor": "^0.20.1",
     "@reduxjs/toolkit": "^1.6.2",
+    "@solana/spl-token": "^0.1.8",
+    "@solana/web3.js": "^1.32.0",
     "@testing-library/user-event": "^12.1.10",
     "@typechain/ethers-v5": "^8.0.5",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-redux": "^7.1.20",
-    "auto-create-reducer-script": "^3.3.0",
+    "auto-create-reducer-script": "^3.2.10",
     "axios": "^0.24.0",
     "ethers": "^5.5.2",
     "react": "^17.0.2",
@@ -25,11 +29,10 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "npm run typechain & craco start",
-    "build": "npm run typechain & craco build",
-    "test": "npm run typechain & craco test",
-    "eject": "react-scripts eject",
-    "typechain": "typechain --target ethers-v5 --out-dir ./src/contracts/types './src/contracts/*.json'"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -61,7 +64,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "prettier": "^2.5.1",
-    "ts-jest": "^27.1.2",
-    "typechain": "^6.1.0"
+    "ts-jest": "^27.1.2"
   }
 }
