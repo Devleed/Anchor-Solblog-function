@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { SolanaProviderState } from './solanaProvider.types'
 
 const initialState: SolanaProviderState = {
   isPhantom: false,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   connect: () => {},
+  signAndSendTransaction: () => {},
 }
 
 export const solanaProvider = createSlice({
@@ -14,6 +15,7 @@ export const solanaProvider = createSlice({
     setSolanaState: (state, action: PayloadAction<SolanaProviderState>) => {
       state.isPhantom = action.payload.isPhantom
       state.connect = action.payload.connect
+      state.signAndSendTransaction = action.payload.signAndSendTransaction
     },
   },
 })
