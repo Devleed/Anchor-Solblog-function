@@ -11,8 +11,8 @@ import {
 import * as anchor from '@project-serum/anchor'
 import { SystemProgram, Transaction } from '@solana/web3.js'
 
-import idl from '../../idl.json'
-import { BLOG_PROGRAM_ID } from '../../constant'
+import idl from '../../idl.json' // just like abi in ethereum
+import { BLOG_PROGRAM_ID } from '../../constant' // just like contract address in ethereum
 
 import './styles.scss'
 
@@ -97,8 +97,6 @@ const App: FC<Props> = () => {
     const encodedBio = await blogProgram?.account.blogAccount.fetch(
       blogAccountPubkey!,
     )
-
-    new TextDecoder().decode(encodedBio?.bio)
 
     setUserData({
       address: blogAccountPubkey?.toString()!,

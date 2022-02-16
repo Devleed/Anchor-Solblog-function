@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "cracoConfig": "craco.config.js",
+  "description": "A walkthrough of how to interact with an anchor program. And create a solana application.",
   "dependencies": {
     "@craco/craco": "^5.9.0",
     "@ethersproject/providers": "^5.5.1",

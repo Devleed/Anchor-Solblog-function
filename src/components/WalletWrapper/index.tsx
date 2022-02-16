@@ -12,8 +12,7 @@ import {
   WalletMultiButton,
 } from '@solana/wallet-adapter-react-ui'
 
-import App from '@components/App'
-import Anchor from '@components/Anchor'
+import Blog from '@components/Blog'
 
 import '@solana/wallet-adapter-react-ui/styles.css'
 
@@ -31,7 +30,7 @@ const WalletWrapper = () => {
           <WalletMultiButton />
           <WalletDisconnectButton />
           {/* Your app's components go here, nested within the context providers. */}
-          <Anchor />
+          <Blog />
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
